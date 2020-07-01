@@ -48,7 +48,13 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/tailwindcss',
   ],
+  tailwindcss: {
+    configPath: '~/config/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css',
+    exposeConfig: false,
+  },
   /*
    ** Nuxt.js modules
    */
