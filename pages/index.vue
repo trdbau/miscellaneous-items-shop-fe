@@ -31,7 +31,9 @@
 export default {
   name: '',
   props: {},
-  data() {},
+  data() {
+    return {};
+  },
 };
 </script>
 

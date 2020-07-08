@@ -9,6 +9,7 @@ module.exports = {
   },
   extends: [
     'prettier',
+    'plugin:vue/base',
     'eslint:recommended',
     'prettier/vue',
     'plugin:vue/base',
