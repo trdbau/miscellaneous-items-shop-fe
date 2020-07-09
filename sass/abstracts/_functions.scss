@@ -1,0 +1,13 @@
+// ======================================================
+// Abstracts :: Functions
+// ======================================================
+
+@function z($name) {
+  @if (map-has-key($z_indexes, $name)) {
+    @return map-get($z_indexes, $name);
+  }
+
+  @warn 'There is no item "#{$name}" in this list; choose one of: #{$z_indexes}';
+
+  @return null;
+}

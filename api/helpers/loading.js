@@ -1,4 +1,4 @@
-import $stores from '@/stores';
+import $stores from '@/store';
 
 let timer = null;
 

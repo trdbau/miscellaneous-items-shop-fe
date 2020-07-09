@@ -1,6 +1,6 @@
 import qs from 'qs';
 
-import $stores from '@/stores';
+import $stores from '@/store';
 import appAxios from './appAxios';
 import loading from './helpers/loading';
 

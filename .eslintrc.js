@@ -15,6 +15,7 @@ module.exports = {
     'plugin:vue/base',
     'plugin:vue/recommended',
     'plugin:prettier/recommended',
+    '@vue/prettier',
   ],
   plugins: ['vue', 'prettier'],
   rules: {
