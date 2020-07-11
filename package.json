@@ -31,6 +31,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "nprogress": "^0.2.0",
     "nuxt": "^2.13.0",
+    "nuxt-svgicon": "^1.2.7",
     "qs": "^6.9.4"
   },
   "devDependencies": {
