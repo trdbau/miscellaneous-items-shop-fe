@@ -1,14 +1,29 @@
 <template>
-  <div v-if="isLoading" class="app-loading">
+  <div
+    v-if="isLoading"
+    class="app-loading"
+  >
     <svg
       width="60"
       height="20"
       viewBox="0 0 60 20"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="7" cy="15" r="4" />
-      <circle cx="30" cy="15" r="4" />
-      <circle cx="53" cy="15" r="4" />
+      <circle
+        cx="7"
+        cy="15"
+        r="4"
+      />
+      <circle
+        cx="30"
+        cy="15"
+        r="4"
+      />
+      <circle
+        cx="53"
+        cy="15"
+        r="4"
+      />
     </svg>
   </div>
 </template>
@@ -23,8 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/sass/abstracts/_variables';
-
 @keyframes upAndDown {
   0% {
     opacity: 0;
@@ -53,13 +66,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba($gray_02, 0.8);
+  background-color: rgba(#f1f1f1, 0.8);
   z-index: 1000;
 
   svg {
     display: block;
     margin: 0 auto;
-    fill: $primary;
+    fill: #1f9ac9;
 
     circle {
       animation-name: upAndDown;

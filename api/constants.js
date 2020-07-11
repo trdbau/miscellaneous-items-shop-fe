@@ -12,3 +12,5 @@ export const ERROR_CODES = {
   INVALID_PARAMETER: 422,
   SYSTEM_ERROR: 500,
 };
+
+export const KEY = {};

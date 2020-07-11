@@ -24,14 +24,17 @@ const accessToken = webStorage.get(APP_KEYS.ACCESS_TOKEN);
 if (accessToken) setAxiosHeadersDefaultsAccessToken(accessToken);
 
 let isRefreshing = false;
-let failedAPIOnCall = []; // [section] this is array of failed API/action i called (because of expired token, etc...)
+const failedAPIOnCall = [];
+// [section] this is array of failed API/action i called (because of expired token, etc...)
 
 function addFailedAPIOnCall(failedCallback) {
-  failedAPIOnCall.push(failedCallback); // add the call function to re-call when we have a new token
+  failedAPIOnCall.push(failedCallback);
+  // add the call function to re-call when we have a new token
 }
 
 function reCallFailedAPI(token) {
-  failedAPIOnCall.map(failedCallback => failedCallback(token)); // re-call all the API that failed
+  failedAPIOnCall.map(failedCallback => failedCallback(token));
+  // re-call all the API that failed
 }
 
 function reloadApp() {
