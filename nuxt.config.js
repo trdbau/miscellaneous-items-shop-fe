@@ -52,8 +52,6 @@ export default {
    */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '~/assets/css/aos.css',
-    '~/assets/css/magnific-popup.css',
     '~/assets/css/style.css',
   ],
   /*
