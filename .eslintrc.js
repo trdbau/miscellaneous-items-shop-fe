@@ -1,21 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
     node: true,
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
+    browser: true,
   },
   extends: [
-    'prettier',
     'eslint:recommended',
-    'prettier/vue',
-    'plugin:vue/base',
+    'plugin:vue/essential',
     'plugin:vue/recommended',
-    'plugin:prettier/recommended',
+    'plugin:vue/strongly-recommended',
+    '@vue/prettier',
   ],
-  plugins: ['vue', 'prettier'],
+  plugins: ['vue'],
   rules: {
     'linebreak-style': [
       'error',
@@ -32,5 +28,11 @@ module.exports = {
         htmlWhitespaceSensitivity: 'ignore',
       },
     ],
+  },
+  globals: {
+    $nuxt: true,
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
   },
 };
