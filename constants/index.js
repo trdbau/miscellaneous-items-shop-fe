@@ -1,9 +1,28 @@
 export const ROUTES = {
-  ROOT: '/',
-  LOGIN: '/login',
-  REGISTER: '/register',
-  USER: '/user',
-  SHOPPING: '/shopping',
+  HOME: {
+    label: 'Home',
+    value: '/',
+  },
+  LOGIN: {
+    label: 'Login',
+    value: '/login',
+  },
+  REGISTER: {
+    label: 'Register',
+    value: '/register',
+  },
+  FORGOT_PASSWORD: {
+    label: 'Forgot Password',
+    value: '/forgot-password',
+  },
+  SHOP: {
+    label: 'Shop',
+    value: '/shop',
+  },
+  ABOUT: {
+    label: 'About',
+    value: '/about',
+  },
 };
 
 export const APP_KEYS = {

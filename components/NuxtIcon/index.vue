@@ -1,10 +1,5 @@
 <template>
-  <svgicon
-    :name="name"
-    :width="width"
-    :color="color"
-    :height="height"
-  />
+  <svgicon :name="name" :width="width" :color="color" :height="height" />
 </template>
 
 <script>
@@ -25,7 +20,7 @@ export default {
     },
     color: {
       type: String,
-      default: '',
+      default: 'black',
     },
   },
   methods: {

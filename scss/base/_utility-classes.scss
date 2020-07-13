@@ -1,0 +1,9 @@
+/* stylelint-disable */
+$zIndexs: -10 -8 -6 -4 -2 0 2 4 6 8 10;
+
+@each $zIndex in $zIndexs {
+  .mis-zIndex-#{$zIndex} {
+    z-index: $zIndex;
+  }
+}
+/* stylelint-enable */

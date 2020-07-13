@@ -1,29 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        mis
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <header class="bg-orange-100">
+      <div
+        class="container h-full mx-auto flex flex-col lg:flex-row-reverse px-20"
+      >
+        <div class="lg:w-1/2 pt-64">
+          <div class="text-center">
+            <div class="tracking-widest text-sm">
+              #NEW SUMMER COLLECTION 2020
+            </div>
+            <h1 class="text-6xl font-bold mb-6">ARRIVALS SALES</h1>
+            <router-link
+              to="/shop"
+              class="uppercase px-8 py-3 bg-black text-white text-sm"
+            >
+              shop now
+            </router-link>
+          </div>
+        </div>
+        <div class="lg:w-1/2 h-full">
+          <img
+            src="/images/model_3.png"
+            class="object-cover object-top w-full h-full"
+          />
+        </div>
       </div>
-    </div>
+    </header>
+    <div class="h-screen">Home Page</div>
   </div>
 </template>
 
@@ -37,35 +40,12 @@ export default {
 };
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss" scoped>
+header {
+  height: calc(100vh - 174px);
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  .tracking-widest {
+    letter-spacing: 3px;
+  }
 }
 </style>
