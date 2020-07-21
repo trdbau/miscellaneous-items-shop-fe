@@ -26,28 +26,16 @@ export default {
       },
     ],
   },
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: ['element-ui/lib/theme-chalk/index.css', '@/assets/scss/app.scss'],
   plugins: ['@/plugins/element-ui'],
   components: true,
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/tailwindcss',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
   tailwindcss: {
     configPath: './config/tailwind.config.js',
     cssPath: '~/assets/css/tailwind.css',
     exposeConfig: false,
   },
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    'nuxt-svgicon',
-    '@nuxtjs/style-resources',
-  ],
-  styleResources: {
-    scss: ['~/scss/index.scss'],
-  },
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-svgicon'],
   axios: {},
   build: {
     transpile: [/^element-ui/],

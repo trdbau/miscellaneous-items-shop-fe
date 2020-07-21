@@ -19,15 +19,15 @@ export default {
   UNAUTH_ICON_LIST: [
     {
       path: 'shopping',
-      iconName: '001-search',
+      iconName: 'search',
     },
     {
       path: 'white-list',
-      iconName: '002-heart',
+      iconName: 'heart',
     },
     {
       path: 'shopping',
-      iconName: '003-shopping-cart',
+      iconName: 'shopping-cart',
     },
   ],
 };

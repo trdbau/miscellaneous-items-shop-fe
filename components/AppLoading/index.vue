@@ -1,9 +1,9 @@
 <template>
   <div v-if="isLoading" class="app-loading">
     <svg
-      width="60"
       height="20"
       viewBox="0 0 60 20"
+      width="60"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle cx="7" cy="15" r="4" />

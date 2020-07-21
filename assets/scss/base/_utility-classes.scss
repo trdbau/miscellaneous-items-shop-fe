@@ -1,0 +1,56 @@
+// ======================================================
+// Base :: Utility Classes
+// ======================================================
+
+// create variables for utilities Classes
+$property-map: (
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  bdr: border-radius,
+  w: width,
+);
+
+$sizes-list: -6 0 4 8 12 16 18 20 24 28 32 40 44 48 160;
+$sizes-by-percent: 0 25 30 33 35 38 50 63 70 75 100;
+$positions: left right center;
+
+/// Auto
+@each $keyword, $property in $property-map {
+  .mt-#{$keyword}-auto {
+    #{$property}: auto;
+  }
+
+  @each $size in $sizes-list {
+    $val: $size + px;
+
+    .mt-#{$keyword}-#{$size} {
+      #{$property}: $val;
+    }
+  }
+}
+
+@each $size in $sizes-by-percent {
+  $val: percentage($size / 100);
+
+  .mt-w-#{$size}p {
+    width: $val;
+  }
+}
+
+.mt-d-block {
+  display: block;
+}
+
+@each $position in $positions {
+  .mt-text-#{$position} {
+    text-align: $position;
+  }
+}

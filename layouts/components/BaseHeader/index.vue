@@ -1,32 +1,32 @@
 <template>
   <nav
     :class="{
-      'h-20 bg-white top-0 left-0 w-screen mis-navbar sticky z-50': true,
+      'h-20 bg-white top-0 left-0 mis-navbar sticky z-10': true,
       shadow: !isAtTop,
     }"
   >
     <div
       class="container px-20 mx-auto flex items-center justify-between h-full"
     >
-      <router-link
+      <nuxt-link
         class="text-xl font-bold px-3 border-solid border-2 border-gray-900 mis-navbar__logo"
         to="/"
       >
         M.I.S
-      </router-link>
+      </nuxt-link>
 
       <div class="mis-navbar__nav-links flex items-center h-full">
         <div
           v-for="(route, indexOfRoute) in constants.ROUTES"
           :key="`route_${indexOfRoute}`"
           :class="{
-            'px-4 h-full flex items-center': true,
+            'h-full flex items-center': true,
             'relative has-children': route.children,
           }"
         >
-          <router-link :to="route.label" class="relative">
+          <nuxt-link class="px-4" :to="route.label">
             {{ route.label }}
-          </router-link>
+          </nuxt-link>
 
           <ul
             v-if="route.children"
@@ -36,25 +36,25 @@
               v-for="(item, indexOfChild) in route.children"
               :key="`child_${indexOfChild}`"
             >
-              <router-link
-                :to="item.label"
+              <nuxt-link
                 class="py-3 px-5 hover:bg-gray-200 w-40 block font-light text-gray-700 hover:text-black"
+                :to="item.label"
               >
                 {{ item.label }}
-              </router-link>
+              </nuxt-link>
             </li>
           </ul>
         </div>
       </div>
       <div class="flex">
-        <router-link
+        <nuxt-link
           v-for="(icon, index) in constants.UNAUTH_ICON_LIST"
           :key="`icon_${index}`"
-          :to="`/${icon.path}`"
           class="px-2"
+          :to="`/${icon.path}`"
         >
           <NuxtIcon :name="icon.iconName" />
-        </router-link>
+        </nuxt-link>
       </div>
     </div>
   </nav>
@@ -102,12 +102,13 @@ export default {
       .has-children {
         ul {
           top: 100%;
+          z-index: -10;
           @apply invisible opacity-0;
         }
 
         &:hover {
           ul {
-            @apply visible opacity-100 shadow;
+            @apply visible opacity-100 shadow z-20;
           }
         }
       }
