@@ -1,0 +1,41 @@
+// ======================================================
+// Abstracts :: Mixins
+// ======================================================
+
+@mixin transition($what: all, $time: .3s, $how: ease) {
+  transition: $what $time $how;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin disable-focus-style() {
+  box-shadow: none;
+  outline: none;
+}
+
+@mixin text-truncate() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin circle($size) {
+  @include size($size, $size);
+
+  border-radius: 50%;
+}

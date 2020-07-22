@@ -1,5 +1,5 @@
 <template>
-  <svgicon :name="name" :width="width" :color="color" :height="height" />
+  <svgicon :color="color" :height="height" :name="name" :width="width" />
 </template>
 
 <script>

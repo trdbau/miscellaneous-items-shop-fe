@@ -1,4 +1,9 @@
 /* eslint-disable */
-import './001-search.js'
-import './002-heart.js'
-import './003-shopping-cart.js'
+import './email.js'
+import './facebook.js'
+import './heart.js'
+import './instagram.js'
+import './phone-call.js'
+import './pin.js'
+import './search.js'
+import './shopping-cart.js'

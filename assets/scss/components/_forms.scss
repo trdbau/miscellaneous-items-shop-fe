@@ -1,0 +1,31 @@
+// ======================================================
+// Components :: Forms
+// ======================================================
+
+.el-form {
+  .el-input {
+    input {
+      @apply border-transparent h-10 rounded-sm bg-gray-200;
+
+      &::placeholder {
+        @apply text-gray-500;
+      }
+    }
+  }
+
+  .el-button {
+    @apply h-10 py-0 rounded-sm text-center duration-300;
+
+    &.btn {
+      &--outline {
+        &-black {
+          @apply bg-black text-white border-black;
+
+          &:hover {
+            @apply opacity-75;
+          }
+        }
+      }
+    }
+  }
+}
