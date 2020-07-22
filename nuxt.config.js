@@ -1,3 +1,5 @@
+const path = require('path');
+
 export default {
   mode: 'universal',
   target: 'server',
@@ -38,6 +40,11 @@ export default {
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-svgicon'],
   axios: {},
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+      },
+    },
     transpile: [/^element-ui/],
   },
 };

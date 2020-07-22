@@ -4,10 +4,7 @@
       <div class="-mx-4 flex">
         <div class="w-1/4 px-4">
           <div class="text-center">
-            <nuxt-link
-              class="text-xl font-bold px-3 border-solid border-2 border-gray-900 mis-footer__logo"
-              to="/"
-            >
+            <nuxt-link class="mis-footer__logo" to="/">
               M.I.S
             </nuxt-link>
           </div>
@@ -74,20 +71,22 @@
             Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa.
           </div>
           <div>
-            <el-form
-              ref="formData"
-              label-width="120px"
-              :model="formData"
-              :rules="rulesForm"
-            >
-              <el-form-item prop="newsletter">
+            <el-form ref="formData" :model="formData" :rules="rulesForm">
+              <el-form-item
+                class="mb-2"
+                :inline-message="true"
+                prop="newsletter"
+              >
                 <el-input
                   v-model="formData.newsletter"
                   placeholder="Email của bạn"
                 />
               </el-form-item>
               <el-form-item>
-                <el-button @click="submitForm">
+                <el-button
+                  class="btn--outline-black w-full"
+                  @click="submitForm"
+                >
                   Đăng ký
                 </el-button>
               </el-form-item>
@@ -107,23 +106,29 @@ export default {
       newsletter: '',
     },
     rulesForm: {
-      clientName: [
+      newsletter: [
         {
           required: true,
           message: 'Hãy nhập E-Mail của bạn!',
-          trigger: 'blur',
+          trigger: 'change',
         },
         {
           type: 'email',
           message: 'Hãy nhập đúng định dạng E-Mail',
-          trigger: 'blur',
+          trigger: 'change',
         },
       ],
     },
   }),
   methods: {
     submitForm() {
-      console.log(123); // eslint-disable-line no-console
+      this.$refs.formData.validate(async valid => {
+        if (!valid) {
+          return false;
+        }
+
+        alert('Chúng tôi sẽ thông báo!'); // eslint-disable-line
+      });
     },
   },
 };
@@ -134,6 +139,7 @@ export default {
   &-footer {
     &__logo {
       letter-spacing: 6px;
+      @apply text-xl font-bold px-3 border-solid border-2 border-gray-900 inline-block;
     }
 
     strong {

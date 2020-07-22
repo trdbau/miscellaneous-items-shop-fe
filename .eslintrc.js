@@ -47,6 +47,9 @@ module.exports = {
         alphabetical: true,
       },
     ],
+    'no-console': 2,
+    'no-debugger': 2,
+    'no-alert': 2,
   },
   globals: {
     $nuxt: true,
