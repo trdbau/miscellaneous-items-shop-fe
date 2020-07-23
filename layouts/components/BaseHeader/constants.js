@@ -18,10 +18,6 @@ export default {
   },
   UNAUTH_ICON_LIST: [
     {
-      path: 'shopping',
-      iconName: 'search',
-    },
-    {
       path: 'white-list',
       iconName: 'heart',
     },

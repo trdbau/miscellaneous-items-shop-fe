@@ -30,7 +30,7 @@ export default {
   },
   css: ['element-ui/lib/theme-chalk/index.css', '@/assets/scss/app.scss'],
   plugins: ['@/plugins/element-ui'],
-  components: true,
+  components: ['~/components/', '~/pages/'],
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
   tailwindcss: {
     configPath: './config/tailwind.config.js',

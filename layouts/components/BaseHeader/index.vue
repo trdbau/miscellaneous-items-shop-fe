@@ -24,7 +24,7 @@
             'relative has-children': route.children,
           }"
         >
-          <nuxt-link class="px-4" :to="route.label">
+          <nuxt-link class="px-4" :to="route.value">
             {{ route.label }}
           </nuxt-link>
 
@@ -47,6 +47,8 @@
         </div>
       </div>
       <div class="flex">
+        <NuxtIcon class="px-2" name="search" width="36" />
+
         <nuxt-link
           v-for="(icon, index) in constants.UNAUTH_ICON_LIST"
           :key="`icon_${index}`"

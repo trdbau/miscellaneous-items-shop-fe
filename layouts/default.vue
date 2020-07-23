@@ -1,8 +1,8 @@
 <template>
-  <div class="relative">
+  <div class="relative min-h-screen flex flex-col">
     <AppLoading />
     <BaseHeader />
-    <Nuxt />
+    <Nuxt class="flex-1" />
     <BaseFooter />
   </div>
 </template>

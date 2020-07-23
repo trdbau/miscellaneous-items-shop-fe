@@ -2,7 +2,7 @@ module.exports = {
   theme: {},
   important: true,
   options: {
-    prefix: '',
+    prefix: 'mis',
     important: true,
   },
 };
