@@ -83,7 +83,7 @@
                 />
               </el-form-item>
               <el-form-item>
-                <NuxtButton @click="submitForm">
+                <NuxtButton class="w-full" @click="submitForm">
                   Đăng ký
                 </NuxtButton>
               </el-form-item>

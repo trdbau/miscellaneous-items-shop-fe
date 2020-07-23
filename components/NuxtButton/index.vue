@@ -74,10 +74,13 @@ export default {
   &--primary {
     fill: theme('colors.white');
     @apply bg-black text-white;
+
+    &:hover {
+      @apply bg-opacity-75;
+    }
   }
 
   .svg-icon {
-    transition: all ease 0.3s;
     @apply duration-300 mr-1;
   }
 }
