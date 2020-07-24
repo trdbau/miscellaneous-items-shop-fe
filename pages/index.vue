@@ -9,13 +9,10 @@
             <div class="tracking-widest text-sm">
               #NEW SUMMER COLLECTION 2020
             </div>
-            <h1 class="text-6xl font-bold mb-6">ARRIVALS SALES</h1>
-            <nuxt-link
-              class="uppercase px-8 py-3 bg-black text-white text-sm hover:bg-gray-800"
-              to="/shop"
-            >
+            <h1 class="text-6xl font-bold mb-4">ARRIVALS SALES</h1>
+            <NuxtButton class="uppercase px-8 py-3 h-auto" link="/shop">
               shop now
-            </nuxt-link>
+            </NuxtButton>
           </div>
         </div>
         <div class="lg:w-1/2 h-full">
@@ -43,13 +40,13 @@
                   class="object-cover object-top"
                   src="/images/model_4.png"
                 />
-                <nuxt-link
-                  class="absolute bg-white px-6 py-3 hover:bg-black hover:text-white"
-                  to="/shop?keywords=women"
+                <NuxtButton
+                  class="absolute px-6 py-3 h-auto border-none rounded-none"
+                  link="/shop?keywords=women"
                 >
                   <span>Women</span>
-                  <span class="text-sm text-gray-500">25 items</span>
-                </nuxt-link>
+                  <span class="text-sm text-gray-500 ml-1">25 items</span>
+                </NuxtButton>
               </div>
             </AspectRatioCard>
           </div>
@@ -62,13 +59,13 @@
                   class="object-cover object-top"
                   src="/images/model_5.png"
                 />
-                <nuxt-link
-                  class="absolute bg-white px-6 py-3 hover:bg-black hover:text-white"
-                  to="/shop?keywords=women"
+                <NuxtButton
+                  class="absolute px-6 py-3 h-auto border-none rounded-none"
+                  link="/shop?keywords=women"
                 >
                   <span>Men</span>
-                  <span class="text-sm text-gray-500">25 items</span>
-                </nuxt-link>
+                  <span class="text-sm text-gray-500 ml-1">25 items</span>
+                </NuxtButton>
               </div>
             </AspectRatioCard>
             <AspectRatioCard class="mt-8">
@@ -79,13 +76,13 @@
                   class="object-cover object-top"
                   src="/images/model_6.png"
                 />
-                <nuxt-link
-                  class="absolute bg-white px-6 py-3 hover:bg-black hover:text-white"
-                  to="/shop?keywords=women"
+                <NuxtButton
+                  class="absolute px-6 py-3 h-auto border-none rounded-none"
+                  link="/shop?keywords=shoes"
                 >
                   <span>Shoes</span>
-                  <span class="text-sm text-gray-500">25 items</span>
-                </nuxt-link>
+                  <span class="text-sm text-gray-500 ml-1">25 items</span>
+                </NuxtButton>
               </div>
             </AspectRatioCard>
           </div>
@@ -100,13 +97,14 @@
         </div>
         <div class="flex mt-12 flex-wrap -mx-4">
           <ShoppingCardItem
-            v-for="item in shoppingItems"
+            v-for="item in SHOPPING_LIST_ITEMS"
             :key="item._id"
             class="w-1/3 px-4 mb-4"
             :discount-rate="Number(item.discountRate)"
-            :image="item.image"
             :name="item.name"
             :price="Number(item.price)"
+            :thumbnail="item.thumbnail"
+            :uuid="item._id"
           />
         </div>
       </div>
@@ -115,14 +113,14 @@
 </template>
 
 <script>
-import { shoppingItems } from '@/seeding';
+import { SHOPPING_LIST_ITEMS } from '@/seeding';
 
 export default {
   name: '',
   props: {},
   data() {
     return {
-      shoppingItems,
+      SHOPPING_LIST_ITEMS,
     };
   },
 };

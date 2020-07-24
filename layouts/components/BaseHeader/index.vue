@@ -105,7 +105,7 @@ export default {
         ul {
           top: 100%;
           z-index: -10;
-          @apply invisible opacity-0;
+          @apply invisible opacity-0 duration-300;
         }
 
         &:hover {

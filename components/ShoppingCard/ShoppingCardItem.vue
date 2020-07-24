@@ -1,9 +1,9 @@
 <template>
   <div>
-    <nuxt-link to="/shop">
+    <nuxt-link :to="`/detail-product/${uuid}`">
       <AspectRatioCard>
         <div class="w-full h-full flex items-center justify-center">
-          <img class="object-cover object-center w-full" :src="image" />
+          <img class="object-cover object-center w-full" :src="thumbnail" />
         </div>
       </AspectRatioCard>
       <div class="mt-2">
@@ -37,6 +37,10 @@ import formatCurrency from '@/helpers/formatCurrency';
 export default {
   name: 'ShoppingCardItem',
   props: {
+    uuid: {
+      type: String,
+      required: true,
+    },
     price: {
       type: Number,
       default: 0,
@@ -49,7 +53,7 @@ export default {
       type: Number,
       default: 1,
     },
-    image: {
+    thumbnail: {
       type: String,
       default: '',
     },

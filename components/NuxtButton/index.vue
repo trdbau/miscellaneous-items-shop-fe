@@ -30,7 +30,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'primary',
+      default: 'outline-black',
     },
     size: {
       type: Number,
@@ -55,12 +55,10 @@ export default {
 
 <style lang="scss">
 .mis-btn {
-  @apply h-10 cursor-pointer text-center border border-transparent rounded-sm bg-white px-4;
+  @apply h-10 cursor-pointer border border-transparent rounded-sm bg-white px-4 inline-block;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply flex items-center justify-center h-full;
   }
 
   &:focus {
@@ -71,12 +69,13 @@ export default {
     @apply bg-gray-400 border-gray-400 text-white cursor-not-allowed;
   }
 
-  &--primary {
-    fill: theme('colors.white');
-    @apply bg-black text-white;
+  &--outline-black {
+    fill: theme('colors.black');
+    @apply bg-white text-black border-black duration-300;
 
     &:hover {
-      @apply bg-opacity-75;
+      fill: theme('colors.white');
+      @apply bg-black text-white;
     }
   }
 
