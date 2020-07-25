@@ -41,7 +41,7 @@
             <strong class="font-bold">liên hệ</strong>
           </div>
           <div class="mb-2 text-xs">
-            <nuxt-link class="flex items-center" to="/">
+            <nuxt-link class="inline-flex items-center" to="/">
               <NuxtIcon
                 class="mr-2"
                 height="14px"
@@ -52,7 +52,7 @@
             </nuxt-link>
           </div>
           <div class="mb-2 text-xs">
-            <nuxt-link class="flex items-center" to="/">
+            <nuxt-link class="inline-flex items-center" to="/">
               <NuxtIcon
                 class="mr-2"
                 height="14px"
@@ -83,12 +83,9 @@
                 />
               </el-form-item>
               <el-form-item>
-                <el-button
-                  class="btn--outline-black w-full"
-                  @click="submitForm"
-                >
+                <NuxtButton class="w-full" @click="submitForm">
                   Đăng ký
-                </el-button>
+                </NuxtButton>
               </el-form-item>
             </el-form>
           </div>
@@ -101,27 +98,51 @@
 <script>
 export default {
   name: 'BaseFooter',
-  data: () => ({
-    formData: {
-      newsletter: '',
-    },
-    rulesForm: {
-      newsletter: [
-        {
-          required: true,
-          message: 'Hãy nhập E-Mail của bạn!',
-          trigger: 'change',
-        },
-        {
-          type: 'email',
-          message: 'Hãy nhập đúng định dạng E-Mail',
-          trigger: 'change',
-        },
-      ],
-    },
-  }),
+  data() {
+    return {
+      timeOut: null,
+      isSubmitBtnClicked: false,
+      formData: {
+        newsletter: '',
+      },
+      rulesForm: {
+        newsletter: [
+          {
+            validator: this.validateOnFocusing,
+            trigger: 'blur',
+          },
+          {
+            type: 'email',
+            message: 'Hãy nhập đúng định dạng E-Mail',
+            trigger: 'blur',
+          },
+        ],
+      },
+    };
+  },
   methods: {
+    validateOnFocusing(rule, value, callback) {
+      if (this.isSubmitBtnClicked && !value.length) {
+        callback(new Error('Hãy nhập E-Mail của bạn'));
+      } else {
+        callback();
+      }
+    },
+    turnRequireOn() {
+      clearTimeout(this.timeOut);
+      this.isSubmitBtnClicked = true;
+      this.timeOut = setTimeout(() => {
+        this.turnRequireOff();
+      }, 2000);
+    },
+    turnRequireOff() {
+      this.timeOut = null;
+      this.isSubmitBtnClicked = false;
+      this.$refs.formData.validate();
+    },
     submitForm() {
+      this.turnRequireOn();
+
       this.$refs.formData.validate(async valid => {
         if (!valid) {
           return false;

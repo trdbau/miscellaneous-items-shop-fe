@@ -1,0 +1,15 @@
+.el-collapse {
+  @apply border-none;
+
+  &-item {
+    @apply border-gray-600 border-0;
+
+    &__header {
+      @apply border-none h-10 text-sm;
+    }
+
+    &__wrap {
+      @apply border-none;
+    }
+  }
+}

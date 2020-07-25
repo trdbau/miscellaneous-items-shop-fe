@@ -4,6 +4,8 @@ dist
 .nuxt
 static/sw.js
 
+assets/svg/bundle
+
 # Editor directories and files
 .idea
 *.suo
