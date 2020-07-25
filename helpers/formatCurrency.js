@@ -1,5 +1,5 @@
-export default function formatCurrency(price, currency = 'USD') {
+export default function formatCurrency(price, currency = 'VND') {
   const options = { style: 'currency', currency };
 
-  return new Intl.NumberFormat('de-DE', options).format(price);
+  return new Intl.NumberFormat('vi-VN', options).format(price);
 }

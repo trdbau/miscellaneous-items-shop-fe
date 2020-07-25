@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-link :to="`/detail-product/${uuid}`">
-      <AspectRatioCard>
+      <AspectRatioCard :horizontal="3" :vertical="4">
         <div class="w-full h-full flex items-center justify-center">
           <img class="object-cover object-center w-full" :src="thumbnail" />
         </div>
@@ -13,7 +13,10 @@
               {{ currentPrice }}
             </span>
 
-            <span class="text-xs line-through text-gray-700">
+            <span
+              v-if="discountRate !== 1"
+              class="text-xs line-through text-gray-700"
+            >
               {{ formatCurrency(price) }}
             </span>
           </div>
@@ -23,7 +26,7 @@
           <div
             aria-label="Rating of this product is 2.3 out of 5."
             class="Stars"
-            style="--rating: 2.3;"
+            :style="{ '--rating': rating }"
           />
         </div>
       </div>
@@ -57,6 +60,10 @@ export default {
       type: String,
       default: '',
     },
+    rating: {
+      type: Number,
+      default: 5,
+    },
   },
   computed: {
     currentPrice() {
@@ -70,10 +77,6 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --star-background: #fc0;
-}
-
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
 

@@ -6,7 +6,7 @@ export const SHOPPING_LIST_ITEMS = [
     discountRate: '00.90',
     thumbnail: 'https://picsum.photos/200/300',
     images: [],
-    total: '',
+    stock: 10, // cái này là tồn kho nha
     category: [],
     rating: '',
     comments: [],
@@ -54,5 +54,133 @@ export const SHOPPING_LIST_ITEMS = [
     price: '64.527',
     discountRate: '00.85',
     thumbnail: 'https://picsum.photos/200/300',
+  },
+];
+
+export const CATEGORIES = [
+  {
+    title: 'Đồ chơi',
+    query: 'do-choi-14135',
+    children: [
+      {
+        title: 'Medicum Toy',
+        query: 'medicum-toy',
+      },
+    ],
+  },
+  {
+    title: 'Gấu bông - Gối',
+    query: 'gau-bong-goi-47893',
+    children: [
+      {
+        title: 'Gối chữ u',
+        query: 'goi-chu-u-1234',
+      },
+    ],
+  },
+  {
+    title: 'Văn phòng phẩm',
+    query: 'van-phong-pham',
+  },
+  {
+    title: 'Đồ gia dụng',
+    query: 'do-da-dung',
+  },
+  {
+    title: 'Du lịch',
+    query: 'du-lich',
+  },
+  {
+    title: 'Trang trí',
+    query: 'trang-tri',
+  },
+];
+
+export const ROUTES = {
+  SHOP: {
+    label: 'Shop',
+    value: '/shop',
+    children: [
+      { label: 'Quần áo' },
+      { label: 'Quần áo' },
+      { label: 'Quần áo' },
+      { label: 'Quần áo' },
+      { label: 'Quần áo' },
+    ],
+  },
+  ABOUT: {
+    label: 'About',
+    value: '/about',
+  },
+};
+
+export const UNAUTH_ICON_LIST = [
+  {
+    path: 'white-list',
+    iconName: 'heart',
+  },
+  {
+    path: 'shopping',
+    iconName: 'shopping-cart',
+  },
+];
+
+export const COST_RANGE_SELECT = [
+  {
+    label: 'Giá dưới 100.000₫',
+    range: {
+      from: 0,
+      to: 100000,
+    },
+  },
+  {
+    label: '100.000₫-200.000₫',
+    range: {
+      from: 100000,
+      to: 200000,
+    },
+  },
+  {
+    label: '200.000₫-300.000₫',
+    range: {
+      from: 200000,
+      to: 300000,
+    },
+  },
+  {
+    label: '300.000₫-500.000₫',
+    range: {
+      from: 300000,
+      to: 500000,
+    },
+  },
+  {
+    label: 'Giá trên 500.000₫',
+    range: {
+      from: 500000,
+    },
+  },
+];
+
+export const SORT_BY_LIST = [
+  {
+    label: 'Tên A-Z',
+    value: 'A-Z',
+  },
+  {
+    label: 'Tên Z-A',
+    value: 'Z-A',
+  },
+  {
+    label: 'Giá thấp đến cao',
+    value: '',
+  },
+  {
+    label: 'Giá cao đến thấp',
+    value: '',
+  },
+  {
+    label: 'Hàng mới',
+    value: 'new',
   },
 ];

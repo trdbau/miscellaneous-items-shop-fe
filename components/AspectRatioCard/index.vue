@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     ratioStyle() {
-      // [???] ratio = y/x
+      // [???] ratio = y/x = v/h
       return { 'padding-top': `${(this.vertical / this.horizontal) * 100}%` };
     },
   },

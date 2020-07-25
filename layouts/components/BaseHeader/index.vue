@@ -17,7 +17,7 @@
 
       <div class="mis-navbar__nav-links flex items-center h-full">
         <div
-          v-for="(route, indexOfRoute) in constants.ROUTES"
+          v-for="(route, indexOfRoute) in ROUTES"
           :key="`route_${indexOfRoute}`"
           :class="{
             'h-full flex items-center': true,
@@ -38,7 +38,7 @@
             >
               <nuxt-link
                 class="py-3 px-5 hover:bg-gray-200 w-40 block font-light text-gray-700 hover:text-black"
-                :to="item.label"
+                :to="{ path: '/shop', query: { collection: item.label } }"
               >
                 {{ item.label }}
               </nuxt-link>
@@ -50,7 +50,7 @@
         <NuxtIcon class="px-2" name="search" width="36" />
 
         <nuxt-link
-          v-for="(icon, index) in constants.UNAUTH_ICON_LIST"
+          v-for="(icon, index) in UNAUTH_ICON_LIST"
           :key="`icon_${index}`"
           class="px-2"
           :to="`/${icon.path}`"
@@ -63,14 +63,15 @@
 </template>
 
 <script>
-import constants from './constants';
+import { ROUTES, UNAUTH_ICON_LIST } from '@/seeding';
 
 export default {
   name: 'BaseHeader',
   props: {},
   data() {
     return {
-      constants,
+      ROUTES,
+      UNAUTH_ICON_LIST,
       isAtTop: true,
     };
   },

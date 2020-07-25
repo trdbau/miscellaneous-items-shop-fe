@@ -1,7 +1,7 @@
 <template>
   <router-link
     v-if="link"
-    :class="`mis-btn mis-btn--${size} mis-btn--${type}`"
+    :class="`mis-btn mis-btn--${type}`"
     :to="link"
     @click.native="handleClick"
   >
@@ -11,7 +11,7 @@
   </router-link>
   <button
     v-else
-    :class="`mis-btn mis-btn--${size} mis-btn--${type}`"
+    :class="`mis-btn mis-btn--${type}`"
     :disabled="disabled"
     type="button"
     @click.prevent="handleClick"
@@ -32,10 +32,6 @@ export default {
       type: String,
       default: 'outline-black',
     },
-    size: {
-      type: Number,
-      default: 128,
-    },
     disabled: {
       type: Boolean,
       default: false,
@@ -53,7 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .mis-btn {
   @apply h-10 cursor-pointer border border-transparent rounded-sm bg-white px-4 inline-block;
 

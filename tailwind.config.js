@@ -2,6 +2,7 @@ module.exports = {
   theme: {},
   variants: {},
   plugins: [],
+  important: true,
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -11,8 +12,5 @@ module.exports = {
       'plugins/**/*.js',
       'nuxt.config.js',
     ],
-  },
-  options: {
-    important: true,
   },
 };
