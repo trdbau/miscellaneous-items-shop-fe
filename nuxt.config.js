@@ -1,4 +1,5 @@
 const path = require('path');
+const routes = require('./routes/index.js');
 
 export default {
   mode: 'universal',
@@ -46,5 +47,16 @@ export default {
       },
     },
     transpile: [/^element-ui/],
+  },
+  router: {
+    extendRoutes(nuxtRoutes, resolve) {
+      routes.forEach(route => {
+        nuxtRoutes.push({
+          name: route.name,
+          path: route.path,
+          component: resolve(__dirname, route.component),
+        });
+      });
+    },
   },
 };
