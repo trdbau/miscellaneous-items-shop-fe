@@ -1,7 +1,7 @@
 <template>
   <footer class="mis-footer mt-8 py-8 bg-gray-100">
     <div class="container px-20 mx-auto">
-      <div class="-mx-4 flex">
+      <div class="-mx-4 flex text-xs">
         <div class="w-1/4 px-4">
           <div class="text-center">
             <nuxt-link class="mis-footer__logo" to="/">
@@ -21,26 +21,26 @@
             </a>
           </div>
           <div class="mt-4 flex">
-            <NuxtIcon class="mr-2" name="pin" />
-            <span>
-              Lô 10 An Thượng 31, Đà Nẵng
-            </span>
+            <NuxtIcon class="mr-2" name="email" />
+            <a href="tel:0383895522">
+              trdbau@gmail.com
+            </a>
           </div>
         </div>
         <div class="w-1/4 px-4 uppercase font-light">
           <div class="my-4">
             <strong class="font-bold">Hỗ trợ</strong>
           </div>
-          <div class="mb-2 text-xs">tìm kiếm</div>
-          <div class="mb-2 text-xs">đăng ký</div>
-          <div class="mb-2 text-xs">đăng nhập</div>
-          <div class="mb-2 text-xs">giỏ hàng</div>
+          <div class="mb-2">tìm kiếm</div>
+          <div class="mb-2">đăng ký</div>
+          <div class="mb-2">đăng nhập</div>
+          <div class="mb-2">giỏ hàng</div>
         </div>
         <div class="w-1/4 px-4 uppercase font-light">
           <div class="my-4">
             <strong class="font-bold">liên hệ</strong>
           </div>
-          <div class="mb-2 text-xs">
+          <div class="mb-2">
             <nuxt-link class="inline-flex items-center" to="/">
               <NuxtIcon
                 class="mr-2"
@@ -51,7 +51,7 @@
               Facebook
             </nuxt-link>
           </div>
-          <div class="mb-2 text-xs">
+          <div class="mb-2">
             <nuxt-link class="inline-flex items-center" to="/">
               <NuxtIcon
                 class="mr-2"
@@ -67,7 +67,7 @@
           <div class="my-4">
             <strong class="font-bold uppercase">đăng ký liên hệ</strong>
           </div>
-          <div class="mb-2 text-xs">
+          <div class="mb-2">
             Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa.
           </div>
           <div>

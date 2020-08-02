@@ -184,3 +184,24 @@ export const SORT_BY_LIST = [
     value: 'new',
   },
 ];
+
+export const LIST_IMAGES = [
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+  'https://picsum.photos/200/300',
+];
+
+export const LIST_COLOR = [
+  'màu đỏ',
+  'màu xanh',
+  'màu vàng',
+  'màu tím',
+  'màu đen',
+  'màu xanh lá cây',
+  'màu vàng chuối',
+];

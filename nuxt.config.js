@@ -31,11 +31,18 @@ export default {
   css: ['element-ui/lib/theme-chalk/index.css', '@/assets/scss/app.scss'],
   plugins: ['@/plugins/element-ui'],
   components: ['~/components/', '~/pages/'],
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/router-extras',
+  ],
   tailwindcss: {
     configPath: './config/tailwind.config.js',
     cssPath: '~/assets/css/tailwind.css',
     exposeConfig: false,
+  },
+  routerExtras: {
+    /* module options */
   },
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-svgicon'],
   axios: {},
@@ -47,4 +54,5 @@ export default {
     },
     transpile: [/^element-ui/],
   },
+  router: {},
 };
