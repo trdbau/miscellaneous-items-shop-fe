@@ -1,9 +1,11 @@
 // ======================================================
 // Components :: Forms
 // ======================================================
+$el-input: ".el-input";
+$el-radio: ".el-radio";
 
 .el-form {
-  .el-input {
+  #{$el-input} {
     input {
       @apply border-transparent h-10 rounded-sm bg-gray-200;
 
@@ -24,6 +26,35 @@
           &:hover {
             @apply opacity-75;
           }
+        }
+      }
+    }
+  }
+}
+
+#{$el-input} {
+  &-number {
+    span[role="button"] {
+      height: calc(100% - 2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+#{$el-radio} {
+  &-button {
+    $this: &;
+
+    &__inner {
+      @apply border border-solid rounded-sm border-gray-300 mb-2 #{!important};
+    }
+
+    &__orig-radio {
+      &:checked {
+        & + #{$this}__inner {
+          @apply shadow-none;
         }
       }
     }
