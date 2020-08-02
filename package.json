@@ -26,9 +26,7 @@
     "nprogress": "^0.2.0",
     "nuxt": "^2.13.0",
     "nuxt-svgicon": "^1.2.7",
-    "qs": "^6.9.4",
-    "swiper": "^6.1.1",
-    "vue-awesome-swiper": "^4.1.1"
+    "qs": "^6.9.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",

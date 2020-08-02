@@ -170,18 +170,6 @@ export default {
     //   immediate: true,
     // },
   },
-  mounted() {
-    this.$nextTick(() => {
-      console.log(this.$refs, 'this.$refs'); // eslint-disable-line no-console
-      // const swiperTop = this.$refs.swiperTop.$swiper;
-      // const swiperThumbs = this.$refs.swiperThumbs.$swiper;
-
-      // console.log(swiperTop, 'swiperTop'); // eslint-disable-line no-console
-      // console.log(swiperThumbs, 'swiperThumbs'); // eslint-disable-line no-console
-      // swiperTop.controller.control = swiperThumbs;
-      // swiperThumbs.controller.control = swiperTop;
-    });
-  },
   methods: {
     formatCurrency,
   },
