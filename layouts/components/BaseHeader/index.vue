@@ -6,7 +6,7 @@
     }"
   >
     <div
-      class="container px-20 mx-auto flex items-center justify-between h-full"
+      class="container px-10 mx-auto flex items-center justify-between h-full"
     >
       <nuxt-link
         class="text-xl font-bold px-3 border-solid border-2 border-gray-900 mis-navbar__logo"

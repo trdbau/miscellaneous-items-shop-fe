@@ -120,7 +120,7 @@ export const UNAUTH_ICON_LIST = [
     iconName: 'heart',
   },
   {
-    path: 'shopping',
+    path: 'shopping-cart',
     iconName: 'shopping-cart',
   },
 ];

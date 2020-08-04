@@ -138,7 +138,6 @@
 <router>
 {
   alias: [ '/detail-product/:slug' ],
-  props: true,
 }
 </router>
 
@@ -179,7 +178,7 @@ export default {
 <style lang="scss" scoped>
 .detail-product {
   .container {
-    @apply px-20 mx-auto;
+    @apply px-10 mx-auto;
   }
 
   &__info {

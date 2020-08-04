@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-20 mx-auto">
+  <div class="container px-10 mx-auto">
     <div class="-mx-4 flex">
       <div class="relative w-1/4 mx-4">
         <ShopNavBar class="w-full" />
