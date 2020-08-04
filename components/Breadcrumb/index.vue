@@ -32,7 +32,7 @@ $breadcrumb: '.el-breadcrumb';
   @apply h-12 uppercase flex items-center mb-6 border-t border-b border-gray-300;
 
   #{$breadcrumb} {
-    @apply mx-auto px-20;
+    @apply mx-auto px-10;
 
     &__item {
       @apply flex items-center;

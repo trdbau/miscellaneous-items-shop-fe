@@ -1,6 +1,6 @@
 <template>
   <footer class="mis-footer mt-8 py-8 bg-gray-100">
-    <div class="container px-20 mx-auto">
+    <div class="container px-10 mx-auto">
       <div class="-mx-4 flex text-xs">
         <div class="w-1/4 px-4">
           <div class="text-center">

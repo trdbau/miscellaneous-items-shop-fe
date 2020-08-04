@@ -75,6 +75,20 @@ export default {
     }
   }
 
+  &--text-black {
+    fill: theme('colors.black');
+    @apply bg-white text-black border-none duration-300;
+  }
+
+  &--bg-black {
+    fill: theme('colors.white');
+    @apply bg-black text-white border-black duration-300;
+
+    &:hover {
+      @apply bg-opacity-75;
+    }
+  }
+
   .svg-icon {
     @apply duration-300 mr-1;
   }

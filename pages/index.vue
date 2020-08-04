@@ -2,7 +2,7 @@
   <div class="mis-home relative z-0">
     <header class="bg-orange-100">
       <div
-        class="container h-full mx-auto flex flex-col lg:flex-row-reverse px-20"
+        class="container h-full mx-auto flex flex-col lg:flex-row-reverse px-10"
       >
         <div class="lg:w-1/2 pt-64">
           <div class="text-center">
@@ -25,7 +25,7 @@
     </header>
 
     <div class="mis-home__collections pt-20">
-      <div class="container px-20 mx-auto">
+      <div class="container px-10 mx-auto">
         <div class="border-l-4 border-red-600 pl-8 text-3xl">
           <h2 class="leading-tight">DISCOVER</h2>
           <h2 class="leading-tight">THE COLLECTIONS</h2>
@@ -91,7 +91,7 @@
     </div>
 
     <div class="mis-home__popular pt-20">
-      <div class="container px-20 mx-auto">
+      <div class="container px-10 mx-auto">
         <div class="border-l-4 border-red-600 pl-8 text-3xl">
           <h2 class="leading-tight">POPULAR PRODUCTS</h2>
         </div>
